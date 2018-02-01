@@ -11,7 +11,17 @@
             position: relative;
         }
         .imgcen{
-            
+            -webkit-filter: blur(5px);
+            -ms-filter: blur(5px);
+            filter: blur(5px);
+            background: rgba(255,255,255,0.5);
+        }
+        .imgcen-change{
+            position: relative;
+            -webkit-filter: blur(0);
+            -ms-filter: blur(0);
+            filter: blur(0);
+            background: rgba(255,255,255,0);
         }
         .word{
             position: absolute;
@@ -19,7 +29,34 @@
             left: 520px;
             width: 500px;
             height: 500px;
-            border: 1px solid #fff;
+            -webkit-filter: blur(0);
+            -ms-filter: blur(0);
+            filter: blur(0);
+        }
+        .con-word{
+            color: #d65bdc;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%,-50%);
+            -moz-transform: translate(-50%,-50%);
+            -ms-transform: translate(-50%,-50%);
+            -o-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
+        }
+        .conw-bg{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50px;
+            height: 20px;
+            border-radius: 10px;
+            opacity: 0.5;
+            background: -webkit-radial-gradient(#5ad5db,#fff); /* Safari 5.1 - 6.0 */
+            background: -o-radial-gradient(#5ad5db,#fff); /* Opera 11.6 - 12.0 */
+            background: -moz-radial-gradient(#5ad5db,#fff); /* Firefox 3.6 - 15 */
+            background: radial-gradient(#5ad5db,#fff); /* 标准的语法 */
+            z-index: -1;
         }
         .top-l{
             position: absolute;
@@ -27,7 +64,7 @@
             left: 50%;
             width: 0;
             height: 49%;
-            border: 1px solid red;
+            border-top: 5px solid #fff;
         }
         .top-l-change{
             width: 49%;
@@ -38,49 +75,177 @@
             -o-transition: all 1s;
             transition: all 1s;
         }
+        .top-l-change-r{
+            width: 0;
+            left: 50%;
+            -webkit-transition: all 1s;
+            -moz-transition: all 1s;
+            -ms-transition: all 1s;
+            -o-transition: all 1s;
+            transition: all 1s;
+        }
         .top-r{
             position: absolute;
             top: 0;
             left: 50%;
-            width: 49%;
+            width: 0;
             height: 49%;
-            border: 1px solid red;
+            border-top: 5px solid #fff;
+        }
+        .top-r-change{
+            width: 49%;
+            -webkit-transition: all 1s;
+            -moz-transition: all 1s;
+            -ms-transition: all 1s;
+            -o-transition: all 1s;
+            transition: all 1s;
+        }
+        .top-r-change-l{
+            width: 0;
+            left: 50%;
+            -webkit-transition: all 1s;
+            -moz-transition: all 1s;
+            -ms-transition: all 1s;
+            -o-transition: all 1s;
+            transition: all 1s;
         }
         .bottom-l{
             position: absolute;
             top: 50%;
-            left:0;
-            width: 49%;
+            left:50%;
+            width: 0;
             height: 49%;
-            border: 1px solid red;
+            border-bottom: 5px solid #fff;
+        }
+        .bottom-l-change{
+            width: 49%;
+            left: 0;
+            -webkit-transition: all 1s;
+            -moz-transition: all 1s;
+            -ms-transition: all 1s;
+            -o-transition: all 1s;
+            transition: all 1s;
+        }
+        .bottom-l-change-r{
+            width: 0;
+            left: 50%;
+            -webkit-transition: all 1s;
+            -moz-transition: all 1s;
+            -ms-transition: all 1s;
+            -o-transition: all 1s;
+            transition: all 1s;
         }
         .bottom-r{
             position: absolute;
             top: 50%;
             left: 50%;
-            width: 49%;
+            width: 0;
             height: 49%;
-            border: 1px solid red;
+            border-bottom: 5px solid #fff;
+        }
+        .bottom-r-change{
+            width: 49%;
+            -webkit-transition: all 1s;
+            -moz-transition: all 1s;
+            -ms-transition: all 1s;
+            -o-transition: all 1s;
+            transition: all 1s;
+        }
+        .bottom-r-change-l{
+            width: 0;
+            left: 50%;
+            -webkit-transition: all 1s;
+            -moz-transition: all 1s;
+            -ms-transition: all 1s;
+            -o-transition: all 1s;
+            transition: all 1s;
+        }
+        .reverse{
+            direction: ltr;
+        }
+        .word-enter{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: 10px;
+            color: green;
+            -webkit-transform: translateX(-50%);
+            -moz-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            -o-transform: translateX(-50%);
+            transform: translateX(-50%);
+        }
+        .word-enter-change{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: 10px;
+            -webkit-transform: translateX(-50%);
+            -moz-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            -o-transform: translateX(-50%);
+            transform: translateX(-50%);
+            color: blue;
         }
     </style>
 </head>
 <body>
 <div class="con">
-    <img class="imgcen" src="hasiky.jpg" />
+    <img class="imgcen" src="hasiky.jpg"/>
     <div class="word">
         <div class="top-l"></div>
         <div class="top-r"></div>
         <div class="bottom-l"></div>
         <div class="bottom-r"></div>
+        <div class="con-word">
+            喜欢我吗？点击我来撸我啊~~
+            <div class="conw-bg"></div>
+        </div>
+        <div class="word-enter">点击进入</div>
     </div>
 </div>
 <script>
     var topl = document.getElementsByClassName('top-l')[0];
+    var topr = document.getElementsByClassName('top-r')[0];
+    var botl = document.getElementsByClassName('bottom-l')[0];
+    var botr = document.getElementsByClassName('bottom-r')[0];
+    var imgcen = document.getElementsByClassName('imgcen')[0];
+    var wordenter = document.getElementsByClassName('word-enter')[0];
+    var TOPLC = 'top-l-change';
+    var TOPLCR = 'top-l-change-r';
+    var TOPRC = 'top-r-change';
+    var TOPRCL = 'top-r-change-l';
+    var BOTLC = 'bottom-l-change';
+    var BOTLCR = 'bottom-l-change-r';
+    var BOTRC = 'bottom-r-change';
+    var BOTRCL = 'bottom-r-change-l';
+    function toplF() {
+        topl.className += ' '+TOPLC;
+        topr.className += ' '+TOPRC;
+        botl.className += ' '+BOTLC;
+        botr.className += ' '+BOTRC;
+    }
+    function toplFback() {
+        topl.className += ' '+TOPLCR;
+        topr.className += ' '+TOPRCL;
+        botl.className += ' '+BOTLCR;
+        botr.className += ' '+BOTRCL;
+        imgcen.className += ' '+'imgcen-change';
+    }
+    setTimeout(toplF,0);
+    setTimeout(toplFback,5000);
     setTimeout(function () {
-        console.log(topl.className)
-        topl.className += ' '+'top-l-change';
-    },0);
-
+        wordenter.className = wordenter.className.replace('word-enter','word-enter-change');
+    },1000);
+    setTimeout(function () {
+        wordenter.className = wordenter.className.replace('word-enter-change','word-enter');
+    },2000);
+    setTimeout(function () {
+        wordenter.className = wordenter.className.replace('word-enter','word-enter-change');
+    },3000);
+    setTimeout(function () {
+        wordenter.className = wordenter.className.replace('word-enter-change','word-enter');
+    },4000);
 </script>
 </body>
 </html>
