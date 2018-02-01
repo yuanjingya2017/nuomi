@@ -3,8 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        input[type='checkbox'],input[type='radio']{
+            outline: none;
+            -webkit-tap-highlight-color: rgba(0,0,0,0);
+            -webkit-tap-highlight-color: transparent; /* For some Androids */
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+        }
+        .checkboxsquare{
+        }
+        .checkboxsquare:after{
+            display: inline-block;
+            content: '';
+            border:solid 2px #999;
+            width: 20px;
+            height: 20px;
+        }
+        .checkboxsquarechecked{
+            position: relative;
+        }
+        .checkboxsquarechecked:after{
+            display: inline-block;
+            content: '';
+            border:solid 2px #e30657;
+            width: 20px;
+            height: 20px;
+        }
+        .checkboxsquarechecked:before{
+            position: absolute;
+            left: 4px;
+            bottom: 10px;
+            display: inline-block;
+            content: '';
+            border-bottom: 2px solid #e30657;
+            border-left: 2px solid #e30657;
+            width: 14px;
+            height: 10px;
+            -webkit-transform: rotate(-45deg);
+            -moz-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+            -o-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+        }
+        .radiocircle{
+        }
+        .radiocircle:after{
+            display: inline-block;
+            content: '';
+            border:solid 2px #999;
+            width: 20px;
+            height: 20px;
+            border-radius: 12px;
+        }
+        .radiocirclechecked{
+            position: relative;
+        }
+        .radiocirclechecked:after{
+            display: inline-block;
+            content: '';
+            border:solid 2px #e30657;
+            width: 20px;
+            height: 20px;
+            border-radius: 12px;
+        }
+        .radiocirclechecked:before{
+            position: absolute;
+            left: 5px;
+            bottom: 8px;
+            display: inline-block;
+            content: '';
+            border:solid 2px #e30657;
+            width: 10px;
+            height: 10px;
+            border-radius: 8px;
+            background: #e30657;
+        }
+
+
+    </style>
 </head>
 <body>
-
+<input class="checkboxsquare" onclick="javascript:this.className = this.checked?'checkboxsquarechecked':'checkboxsquare';" name="checkboxs" type="checkbox"/>
+<form>
+    <input class="radiocircle" onclick="javascript:var temp = this.nextSibling;this.className = this.checked?'radiocirclechecked':'radiocircle';" type="radio" name="radiotest" onblur="this.className = 'radiocircle';"/>
+    <input class="radiocircle" onclick="javascript:var temp = this.nextSibling;this.className = this.checked?'radiocirclechecked':'radiocircle';" type="radio" name="radiotest" onblur="this.className = 'radiocircle';"/>
+</form>
 </body>
 </html>
