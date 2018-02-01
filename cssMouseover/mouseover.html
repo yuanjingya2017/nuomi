@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        .con{
+            position: relative;
+        }
+        .imgcen{
+            
+        }
+        .word{
+            position: absolute;
+            top: 50px;
+            left: 520px;
+            width: 500px;
+            height: 500px;
+            border: 1px solid #fff;
+        }
+        .top-l{
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 0;
+            height: 49%;
+            border: 1px solid red;
+        }
+        .top-l-change{
+            width: 49%;
+            left: 0;
+            -webkit-transition: all 1s;
+            -moz-transition: all 1s;
+            -ms-transition: all 1s;
+            -o-transition: all 1s;
+            transition: all 1s;
+        }
+        .top-r{
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 49%;
+            height: 49%;
+            border: 1px solid red;
+        }
+        .bottom-l{
+            position: absolute;
+            top: 50%;
+            left:0;
+            width: 49%;
+            height: 49%;
+            border: 1px solid red;
+        }
+        .bottom-r{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 49%;
+            height: 49%;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+<div class="con">
+    <img class="imgcen" src="hasiky.jpg" />
+    <div class="word">
+        <div class="top-l"></div>
+        <div class="top-r"></div>
+        <div class="bottom-l"></div>
+        <div class="bottom-r"></div>
+    </div>
+</div>
+<script>
+    var topl = document.getElementsByClassName('top-l')[0];
+    setTimeout(function () {
+        console.log(topl.className)
+        topl.className += ' '+'top-l-change';
+    },0);
+
+</script>
+</body>
+</html>
