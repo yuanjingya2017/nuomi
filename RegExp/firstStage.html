@@ -6,5 +6,16 @@
 </head>
 <body>
 
+<script>
+    var pattern = /1[35789]\d{9}/;
+    var a = '18812011232';
+    var b = '1883333333';
+    var c = '12345678909';
+    var pattern2 = /\b(\w+)\b\s+\1\b/;
+    var d = 'foo foo bar';
+    var e = 'foo bar foo ';
+    var f = 'foo  barbar bar ';
+    document.write('pattern-t-f-f',pattern.test(a),pattern.test(b),pattern.test(c),'</br>','pattern2-t-f-f',pattern2.test(d),pattern2.test(e),pattern2.test(f))
+</script>
 </body>
 </html>
