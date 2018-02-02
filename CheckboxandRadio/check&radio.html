@@ -90,5 +90,18 @@
     <input class="radiocircle" onclick="javascript:var temp = this.nextSibling;this.className = this.checked?'radiocirclechecked':'radiocircle';" type="radio" name="radiotest" onblur="this.className = 'radiocircle';"/>
     <input class="radiocircle" onclick="javascript:var temp = this.nextSibling;this.className = this.checked?'radiocirclechecked':'radiocircle';" type="radio" name="radiotest" onblur="this.className = 'radiocircle';"/>
 </form>
+    <div style="width:100%;height:300px;" contextmenu="mymenu">
+    </div>
+<menu type="context" id="mymenu">
+    <menuitem label="Refresh" onclick="window.location.reload();"></menuitem>
+    <menu onclick="javascript:alert(1111);" label="Share on...">
+        <menuitem label="Twitter"></menuitem>
+        <menuitem label="Facebook"></menuitem>
+    </menu>
+    <menuitem label="向该网页发送邮件" ></menuitem>
+</menu>
+<script>
+
+</script>
 </body>
 </html>
