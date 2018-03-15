@@ -1,1 +1,69 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .foldpale,.foldpale1,.foldpale2{
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            overflow: hidden;
+        }
+        .foldpale:before{
+            content: 'Collapsible Group Item #1';
+            display: block;
+            width: 500px;
+            height: 60px;
+            line-height: 60px;
+            background: lightgray;
+        }
+        .foldpale:after{
+            content: 'Collapsible Group Item #1Collapsible Group Item #1Collapsible Group Item #1Collapsible Group Item #1Collapsible Group Item #1';
+            display: block;
+            width: 500px;
+            height:0;
+            background: lightgray;
+        }
+        .foldpale1:before{
+            content: 'Collapsible Group Item #2';
+            display: block;
+            width: 500px;
+            height: 60px;
+            line-height: 60px;
+            background: lightgray;
+        }
+        .foldpale1:after{
+            content: 'Collapsible Group Item #2Collapsible Group Item #2Collapsible Group Item #2Collapsible Group Item #2Collapsible Group Item #2Collapsible Group Item #2Collapsible Group Item #2Collapsible Group Item #2';
+            display: block;
+            width: 500px;
+            height:0;
+            background: lightgray;
+        }
+        .foldpale2:before{
+            content: 'Collapsible Group Item #3';
+            display: block;
+            width: 500px;
+            height: 60px;
+            line-height: 60px;
+            background: lightgray;
+        }
+        .foldpale2:after{
+            content: 'Collapsible Group Item #3Collapsible Group Item #3Collapsible Group Item #3Collapsible Group Item #3Collapsible Group Item #3Collapsible Group Item #3';
+            display: block;
+            width: 500px;
+            height:0;
+            background: lightgray;
+        }
+        input[type=radio]:checked{
+            height:200px;
+        }
+    </style>
+</head>
+<body>
+<input type="radio" name="foldpale" class="foldpale">
+<input type="radio" name="foldpale" class="foldpale1">
+<input type="radio" name="foldpale" class="foldpale2">
+</body>
+</html>
