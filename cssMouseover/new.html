@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        .con{
+            position: relative;
+            width: 100%;
+        }
+        .imgcen{
+            -webkit-filter: blur(5px);
+            -ms-filter: blur(5px);
+            filter: blur(5px);
+            background: rgba(255,255,255,0.5);
+        }
+        .imgcen-change{
+            position: relative;
+            -webkit-filter: blur(0);
+            -ms-filter: blur(0);
+            filter: blur(0);
+            background: rgba(255,255,255,0);
+        }
+        .word{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -250px;
+            margin-left: -250px;
+            width: 500px;
+            height: 500px;
+            -webkit-filter: blur(0);
+            -ms-filter: blur(0);
+            filter: blur(0);
+        }
+        .con-word{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%,-50%);
+            -moz-transform: translate(-50%,-50%);
+            -ms-transform: translate(-50%,-50%);
+            -o-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
+            background-image: -webkit-linear-gradient(left,#f672bf 80%,#3498db,#f7acbc);
+            color: transparent;/*文字填充为透明色？*/
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;/*背景裁剪为文字，只将文字显示为背景*/
+            background-size: 200% 100%;/*???*/
+            animation: masked-animation 5s infinite linear;
+        }
+        @keyframes masked-animation {
+            0% {
+                background-position: 0 0;   /*background-position 属性设置背景图像的起始位置。*/
+            }
+            100% {
+                background-position: -100% 0;
+            }
+        }
+        .word-enter{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: 10px;
+            color: green;
+            -webkit-transform: translateX(-50%);
+            -moz-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            -o-transform: translateX(-50%);
+            transform: translateX(-50%);
+        }
+        .word-enter-change{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: 10px;
+            -webkit-transform: translateX(-50%);
+            -moz-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            -o-transform: translateX(-50%);
+            transform: translateX(-50%);
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+<div class="con">
+    <img class="imgcen" src="hasiky.jpg"/>
+    <div class="word">
+        <div class="con-word">
+            喜欢我吗？点击我来撸我啊~
+        </div>
+        <div class="word-enter">点击进入</div>
+    </div>
+</div>
+<script>
+
+</script>
+</body>
+</html>
